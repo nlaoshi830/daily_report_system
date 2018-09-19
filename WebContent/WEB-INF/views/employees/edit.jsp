@@ -14,10 +14,9 @@
                 <form method="POST" action="<c:url value = '/employees/destroy' /> ">
                     <input type ="hidden" name="_token" value="${_token}" />
                 </form>
-
                 <script>
 	                function confirmDestroy(){
-	                	if(confirm("本当によろしいですか？"")){
+	                	if(confirm("本当に削除してよろしいですか？")){
 	                		document.forms[1].submit();
 	                	}
 
@@ -29,7 +28,7 @@
             </c:otherwise>
         </c:choose>
 
-        <p><a href="<c:url value ='/employees/index' />"></a></p>
+        <p><a href="<c:url value ='/employees/index' />">一覧に戻る</a></p>
 
     </c:param>
 </c:import>
