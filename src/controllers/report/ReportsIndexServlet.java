@@ -42,7 +42,7 @@ public class ReportsIndexServlet extends HttpServlet {
 	    }
 
 	    List<Report> reports = em.createNamedQuery("getAllReports", Report.class)
-                            	    .setFirstResult(15 + (page - 1))
+                            	    .setFirstResult(15 * (page - 1))
                             	    .setMaxResults(15)
                             	    .getResultList();
 
